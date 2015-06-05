@@ -68,13 +68,11 @@
   (var-value '?instance
              (car (prolog-?w `(%object ?w ,object-name ?instance)))))
 
-(defun object-pose-tmp (object-name)
+(defun object-pose (object-name)
   (pose (object-instance object-name)))
 
 (defun object-exists (object-name)
   (typep (object-instance object-name) 'bullet-reasoning:object))
-
-;;(defun object-visible-p
 
 (defun household-object-exists (object-name)
   (typep (object-instance object-name) 'bullet-reasoning:household-object))
